@@ -1,0 +1,322 @@
+﻿@model WebUI.Models.Card
+
+@{
+    ViewData["Title"] = "Подробные данные";
+}
+
+<h1>Подробные данные</h1>
+
+<div>
+    <h5>Основные сведения</h5>
+    <hr />
+
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nomer)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nomer)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MiddleName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MiddleName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IsAdmin)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IsAdmin)
+        </dd>
+
+    </dl>
+    <h5>Сведения о рождении и членстве в организциях</h5>
+    <hr />
+
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BirthDay)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BirthDay)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BirthPlace)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BirthPlace)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nationality)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nationality)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Party)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Party)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IsInUnion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IsInUnion)
+        </dd>
+    </dl>
+    <h5>Образование</h5>
+    <hr />
+
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Education)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Education)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AfterSchool)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AfterSchool)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.School)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.School)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EducationType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EducationType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Degree)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Degree)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Profession)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Profession)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Diploma)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Diploma)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.GeneralProfession)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.GeneralProfession)
+        </dd>
+    </dl>
+    <h5>Работа</h5>
+    <hr />
+
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AllWorkDuration)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AllWorkDuration)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ContiniousAllWorkDuration)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ContiniousAllWorkDuration)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LastJob)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LastJob)
+        </dd>
+    </dl>
+    <h5>Семья и паспорт</h5>
+    <hr />
+
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FamilyStatus)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FamilyStatus)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PassportNumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PassportNumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PassportSerie)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PassportSerie)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PassportIssuer)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PassportIssuer)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PassportDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PassportDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Posted)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Posted)
+        </dd>
+    </dl>
+    <h5>Военная служба</h5>
+    <hr />
+    @if (Model.IsMilitary)
+    {
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.MilitaryGroup)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.MilitaryGroup)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.MilitaryCategory)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.MilitaryCategory)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.MilitaryInstitution)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.MilitaryInstitution)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.MilitaryPosition)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.MilitaryPosition)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.MilitaryProfession)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.MilitaryProfession)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.MilitaryHealth)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.MilitaryHealth)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.MilitaryUnit)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.MilitaryUnit)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.MilitarySpecialNumber)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.MilitarySpecialNumber)
+            </dd>
+        </dl>
+    }
+    else
+    {
+        <dl class="row">
+            <dt class="col-sm-2">
+               Не является военнообязанным
+            </dt>
+            <dd class="col-sm-10">
+              
+            </dd>
+        </dl>
+    }
+    <h5>Доп. сведения</h5>
+    <hr />
+
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AdditionalInfo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AdditionalInfo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ResignationReason)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ResignationReason)
+        </dd>
+
+    </dl>
+    <dl class="row">
+
+        <dd class="col-sm-10">
+            <h5>Отпуски</h5>
+            <div>
+                @await Component.InvokeAsync(nameof(VacationsList), new {cardId=Model.CardId})
+
+            </div>
+
+        </dd>
+    </dl>
+
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.CardId">Ред.</a> |
+    <a asp-action="Index">Назад к списку</a>
+</div>

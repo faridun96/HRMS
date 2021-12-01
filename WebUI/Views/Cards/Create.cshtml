@@ -1,0 +1,262 @@
+﻿@model WebUI.Models.Card
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Card</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nomer" class="control-label"></label>
+                <input asp-for="Nomer" class="form-control" />
+                <span asp-validation-for="Nomer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MiddleName" class="control-label"></label>
+                <input asp-for="MiddleName" class="form-control" />
+                <span asp-validation-for="MiddleName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BirthDay" class="control-label"></label>
+                <input asp-for="BirthDay" class="form-control" />
+                <span asp-validation-for="BirthDay" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BirthPlace" class="control-label"></label>
+                <input asp-for="BirthPlace" class="form-control" />
+                <span asp-validation-for="BirthPlace" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nationality" class="control-label"></label>
+                <input asp-for="Nationality" class="form-control" />
+                <span asp-validation-for="Nationality" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Party" class="control-label"></label>
+
+                <select asp-for="Party" class="form-control" asp-items="Html.GetEnumSelectList<WebUI.Models.PartyType>()">
+                </select>
+                @*<input asp-for="Party" class="form-control" />*@
+                <span asp-validation-for="Party" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsInUnion" /> @Html.DisplayNameFor(model => model.IsInUnion)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Education" class="control-label"></label>
+                <input asp-for="Education" class="form-control" />
+                <span asp-validation-for="Education" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AfterSchool" class="control-label"></label>
+                <input asp-for="AfterSchool" class="form-control" />
+                <span asp-validation-for="AfterSchool" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="School" class="control-label"></label>
+                <input asp-for="School" class="form-control" />
+                <span asp-validation-for="School" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EducationType" class="control-label"></label>
+
+                <select asp-for="EducationType" class="form-control" asp-items="Html.GetEnumSelectList<WebUI.Models.StudyType>()">
+                </select>
+                @*<input asp-for="EducationType" class="form-control" />*@
+                <span asp-validation-for="EducationType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Degree" class="control-label"></label>
+                <input asp-for="Degree" class="form-control" />
+                <span asp-validation-for="Degree" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Profession" class="control-label"></label>
+                <input asp-for="Profession" class="form-control" />
+                <span asp-validation-for="Profession" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Diploma" class="control-label"></label>
+                <input asp-for="Diploma" class="form-control" />
+                <span asp-validation-for="Diploma" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GeneralProfession" class="control-label"></label>
+                <input asp-for="GeneralProfession" class="form-control" />
+                <span asp-validation-for="GeneralProfession" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AllWorkDuration" class="control-label"></label>
+                <input asp-for="AllWorkDuration" class="form-control" />
+                <span asp-validation-for="AllWorkDuration" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContiniousAllWorkDuration" class="control-label"></label>
+                <input asp-for="ContiniousAllWorkDuration" class="form-control" />
+                <span asp-validation-for="ContiniousAllWorkDuration" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastJob" class="control-label"></label>
+                <input asp-for="LastJob" class="form-control" />
+                <span asp-validation-for="LastJob" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FamilyStatus" class="control-label"></label>
+                <select asp-for="FamilyStatus" class="form-control" asp-items="Html.GetEnumSelectList<WebUI.Models.FamilyType>()">
+                </select>
+                @*<input asp-for="FamilyStatus" class="form-control" />*@
+                <span asp-validation-for="FamilyStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PassportNumber" class="control-label"></label>
+                <input asp-for="PassportNumber" class="form-control" />
+                <span asp-validation-for="PassportNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PassportSerie" class="control-label"></label>
+                <input asp-for="PassportSerie" class="form-control" />
+                <span asp-validation-for="PassportSerie" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PassportIssuer" class="control-label"></label>
+                <input asp-for="PassportIssuer" class="form-control" />
+                <span asp-validation-for="PassportIssuer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PassportDate" class="control-label"></label>
+                <input asp-for="PassportDate" class="form-control" />
+                <span asp-validation-for="PassportDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label"></label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone" class="control-label"></label>
+                <input asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Posted" class="control-label"></label>
+                <input asp-for="Posted" class="form-control" />
+                <span asp-validation-for="Posted" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" id="IsMilitary" onclick="calc();" asp-for="IsMilitary" /> @Html.DisplayNameFor(model => model.IsMilitary)
+                </label>
+            </div>
+            <div id="mil">
+                <div class="form-group">
+                    <label asp-for="MilitaryGroup" class="control-label"></label>
+                    <input asp-for="MilitaryGroup" class="form-control" />
+                    <span asp-validation-for="MilitaryGroup" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MilitaryCategory" class="control-label"></label>
+                    <input asp-for="MilitaryCategory" class="form-control" />
+                    <span asp-validation-for="MilitaryCategory" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MilitaryInstitution" class="control-label"></label>
+                    <input asp-for="MilitaryInstitution" class="form-control" />
+                    <span asp-validation-for="MilitaryInstitution" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MilitaryPosition" class="control-label"></label>
+                    <input asp-for="MilitaryPosition" class="form-control" />
+                    <span asp-validation-for="MilitaryPosition" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MilitaryProfession" class="control-label"></label>
+                    <input asp-for="MilitaryProfession" class="form-control" />
+                    <span asp-validation-for="MilitaryProfession" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MilitaryHealth" class="control-label"></label>
+                    <input asp-for="MilitaryHealth" class="form-control" />
+                    <span asp-validation-for="MilitaryHealth" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MilitaryUnit" class="control-label"></label>
+                    <input asp-for="MilitaryUnit" class="form-control" />
+                    <span asp-validation-for="MilitaryUnit" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MilitarySpecialNumber" class="control-label"></label>
+                    <input asp-for="MilitarySpecialNumber" class="form-control" />
+                    <span asp-validation-for="MilitarySpecialNumber" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdditionalInfo" class="control-label"></label>
+                <input asp-for="AdditionalInfo" class="form-control" />
+                <span asp-validation-for="AdditionalInfo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ResignationReason" class="control-label"></label>
+                <input asp-for="ResignationReason" class="form-control" />
+                <span asp-validation-for="ResignationReason" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserName" class="control-label"></label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsAdmin" /> @Html.DisplayNameFor(model => model.IsAdmin)
+                </label>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Сохранить" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Назад к списку</a>
+</div>
+<script type="text/javascript">
+    function calc() {
+        if (document.getElementById('IsMilitary').checked) {
+            //document.getElementById('MilitaryGroup').disabled = false;
+            document.getElementById('mil').style.display = 'block';;
+        } else {
+            //document.getElementById('MilitaryGroup').disabled = true;
+            document.getElementById('mil').style.display = 'none';
+
+        }
+    }
+    calc();
+
+</script>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

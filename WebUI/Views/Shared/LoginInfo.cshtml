@@ -1,0 +1,23 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+
+
+@if (HttpContextAccessor.HttpContext.Session.GetString("Auth") != null)
+{
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-action="LogOut" asp-controller="Auth">@HttpContextAccessor.HttpContext.Session.GetString("Auth"), Выход</a>
+    </li>
+    @if (HttpContextAccessor.HttpContext.Session.GetString("IsAdmin") == "1")
+    {<li class="nav-item">
+            <form asp-action="Search" asp-controller="Cards">
+                <input placeholder="Поиск" name="phrase" class="form-control" />
+            </form>
+        </li>
+    }
+}
+else
+{
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-action="Index" asp-controller="Auth">Вход</a>
+    </li>
+}

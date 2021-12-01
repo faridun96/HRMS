@@ -1,0 +1,41 @@
+﻿@model IEnumerable<WebUI.Models.Vacation>
+                      <p>
+                          <a class="btn btn-info" asp-action="Create" asp-route-cardId="@ViewData["cardId"]" asp-controller="Vacations">Добавить отпуск</a>
+                      </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.From)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.To)
+                </th>
+                @*<th>
+                    @Html.DisplayNameFor(model => model.Card)
+                </th>*@
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.From)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.To)
+                    </td>
+                    @*<td>
+                        @Html.DisplayFor(modelItem => item.Card.CardId)
+                    </td>*@
+                    <td>
+                        <a asp-action="Edit"  class="btn btn-info" asp-controller="Vacations" asp-route-id="@item.VacationId">Ред.</a> |
+                        @*<a asp-action="Details"  asp-controller="Vacations" asp-route-id="@item.VacationId">Details</a> |*@
+                        <a asp-action="Delete"  class="btn btn-danger" asp-controller="Vacations" asp-route-id="@item.VacationId">Удал.</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
